@@ -52,5 +52,8 @@ A simple and intuitive web application built with **Flask** and **SQLite** to he
 
 ### Screenshots
 **login page**
+login.png
+
+**signup page**
 
    
