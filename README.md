@@ -35,3 +35,12 @@ bash
 Copy code
 python -m venv env
 source env/bin/activate  # On Windows: env\Scripts\activate
+
+# Screenshots
+Login Page: 
+
+
+
+Task List:
+
+
