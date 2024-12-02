@@ -50,6 +50,8 @@ A simple and intuitive web application built with **Flask** and **SQLite** to he
    ```bash
    python app.py
 
+---
+
 ### Screenshots
 **login page**
 login.png
@@ -60,16 +62,17 @@ signup page.png
 **tasks page**
 tasks page.png
 
+---
 
-### Usage
-**Sign Up:**
-Create an account with a username and password.
-**Log In:**
-Access your personal dashboard.
-**Add Tasks:**
-Add tasks with a title, description, due date, and status.
-**Filter Tasks:**
-Filter tasks by status (Pending/Completed).
-**Update Tasks:**
-Update task status to track progress.
+## **Usage**
+- **Sign Up:**
+  - Create an account with a username and password.
+- **Log In:**
+  - Access your personal dashboard.
+- **Add Tasks:**
+  - Add tasks with a title, description, due date, and status.
+- **Filter Tasks:**
+  - Filter tasks by status (Pending/Completed).
+- **Update Tasks:**
+  - Update task status to track progress.
    
