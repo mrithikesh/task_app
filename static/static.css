@@ -1,0 +1,132 @@
+/* General styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f8ff; /* Light blue background */
+    color: #333; /* Dark text */
+    padding: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: #0066cc; /* Light blue for links */
+}
+
+a:hover {
+    color: #004d99; /* Darker blue for hover */
+}
+
+h1, h2, h3 {
+    font-weight: bold;
+    color: #000; /* Black text for headings */
+}
+
+/* Header */
+header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+header h1 {
+    color: #0066cc;
+}
+
+/* Forms */
+form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    margin: auto;
+}
+
+form input[type="text"], form input[type="password"], form input[type="date"], form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+form input[type="submit"], form button {
+    background-color: #0066cc;
+    color: #fff;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+form input[type="submit"]:hover, form button:hover {
+    background-color: #004d99;
+}
+
+/* Task list */
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    background-color: #fff;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+ul li a {
+    color: #0066cc;
+    margin-left: 20px;
+}
+
+ul li a:hover {
+    color: #004d99;
+}
+
+/* Buttons and links */
+button, .btn-link {
+    color: #0066cc;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+}
+
+button:hover, .btn-link:hover {
+    color: #004d99;
+}
+
+/* Alerts */
+.flash-message {
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 4px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.flash-success {
+    background-color: #28a745;
+    color: white;
+}
+
+.flash-danger {
+    background-color: #dc3545;
+    color: white;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 14px;
+    color: #888;
+}

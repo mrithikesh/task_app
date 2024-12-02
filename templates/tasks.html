@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Tasks</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='static.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Your Tasks</h1>
+            <nav>
+                <a href="{{ url_for('logout') }}" class="btn-link">Logout</a>
+            </nav>
+        </header>
+
+        <!-- Task form for adding new tasks -->
+        <div class="task-form">
+            <h3>Add a New Task</h3>
+            <form method="POST">
+                <label for="title">Title</label>
+                <input type="text" name="title" required placeholder="Task title"><br><br>
+
+                <label for="description">Description</label>
+                <textarea name="description" placeholder="Task description"></textarea><br><br>
+
+                <label for="due_date">Due Date</label>
+                <input type="date" name="due_date" required><br><br>
+
+                <button type="submit" class="btn">Add Task</button>
+            </form>
+        </div>
+
+        <!-- Task filter options -->
+        <div class="task-filter">
+            <h3>Filter Tasks:</h3>
+            <a href="{{ url_for('tasks', status='all') }}" class="btn-link">All Tasks</a>
+            <a href="{{ url_for('tasks', status='Pending') }}" class="btn-link">Pending</a>
+            <a href="{{ url_for('tasks', status='Completed') }}" class="btn-link">Completed</a>
+        </div>
+
+        <!-- Task list display -->
+        <div class="task-list">
+            <h3>Your Task List</h3>
+            <ul>
+                {% for task in tasks %}
+                <li class="task-item">
+                    <div class="task-details">
+                        <h4>{{ task.title }}</h4>
+                        <p>{{ task.description }}</p>
+                        <p><strong>Due Date:</strong> {{ task.due_date }}</p>
+                        <p><strong>Status:</strong> <span class="{{ 'status-pending' if task.status == 'Pending' else 'status-completed' }}">{{ task.status }}</span></p>
+                    </div>
+                    <div class="task-actions">
+                        <a href="{{ url_for('edit_task', task_id=task.id) }}" class="btn-edit">Edit</a>
+                    </div>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
